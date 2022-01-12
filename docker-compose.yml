@@ -1,0 +1,33 @@
+version: "3.7"
+services:
+  app:
+    build:
+      args:
+        user: quiz
+        uid: 1000
+      context: ./
+      dockerfile: ./.docker/Dockerfile
+    image: quiz
+    container_name: quiz-app
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./quiz/:/var/www
+    networks:
+      - quiz
+
+  nginx:
+    image: nginx:alpine
+    container_name: quiz-nginx
+    restart: unless-stopped
+    ports:
+      - 8000:80
+    volumes:
+      - ./quiz/:/var/www
+      - ./.docker/nginx/:/etc/nginx/conf.d/
+    networks:
+      - quiz
+
+networks:
+  quiz:
+    driver: bridge
