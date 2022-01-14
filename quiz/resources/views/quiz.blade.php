@@ -22,16 +22,12 @@
                             </div>
                         @endforeach
 
-                        {{--                        @error('1-1')--}}
-                        {{--                        <div>{{ $message }}</div>--}}
-                        {{--                        @enderror--}}
                     </div>
                 @endforeach
 
                 <div class="warning hidden">Please, select at least one answer</div>
 
                 <div class="form-buttons">
-                    {{-- небольшая проблема - если не валидирован последний элемент, при клике на Show the result выдаётся серверная ошибка --}}
                     <button type="submit" class="showresult button hidden">Show the result</button>
                     <a href="#" class="button next">Next question</a>
                     <a href="#" class="button prev hidden">Previous question</a>

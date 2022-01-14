@@ -24,9 +24,7 @@ class QuizRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-            'gender' => 'required',
-            'hobbies' => 'required',
+            //
         ];
     }
 }

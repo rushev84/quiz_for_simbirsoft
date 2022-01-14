@@ -51,8 +51,6 @@ class QuizResultService
             if ($all_right_choices[$i] === $all_user_choices[$i]) $count_of_right_answers++;
         }
 
-//        ddd($all_right_choices, $all_user_choices, $count_of_right_answers, $count_of_right_answers/count($all_right_choices));
-
         return round($count_of_right_answers/count($all_right_choices), 2);
     }
 }

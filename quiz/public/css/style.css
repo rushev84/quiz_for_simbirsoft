@@ -158,16 +158,6 @@ a.button {
     color: #FFF;
 }
 
-.divider {
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-    color: #405D87;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
 .ctr {
     text-align: center;
     color: #0D6CF2;

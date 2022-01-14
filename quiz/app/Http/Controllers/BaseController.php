@@ -14,5 +14,5 @@ use App\DTO\AnswerDTO;
 
 class BaseController extends Controller
 {
-// пока непонятно, зачем он нужен - может, потом пригодится
+//
 }

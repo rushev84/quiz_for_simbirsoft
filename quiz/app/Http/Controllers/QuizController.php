@@ -21,7 +21,6 @@ class QuizController extends BaseController
     private QuizDTO $quiz;
 
     private function initialize(){
-//        $this->quiz = QuizConvertService::getQuizDTO();
         $data = QuizGetService::getDataFromArray();
         $this->quiz = QuizConvertService::convertArrayDataToQuizDTO($data);
     }
@@ -35,10 +34,8 @@ class QuizController extends BaseController
         ]);
     }
 
-    // здесь нужен QuizRequest, но пока непонятно, как делать валидацию плавающего количества вопросов
     public function getResult(Request $request)
     {
-//        dd($request->all());
         $answers = QuizConvertService::convertRequestToAnswersDTO($request);
 
         $this->initialize();
